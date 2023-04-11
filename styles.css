@@ -1,0 +1,18 @@
+.container {
+	padding-top: 50px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+input {
+  border: 0px solid;
+  height: 100px;
+	text-align: center;
+	font-size: 18px;
+}
+
+input:focus{
+  outline: none;
+}
+
