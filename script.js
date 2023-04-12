@@ -14,8 +14,8 @@ inputField.addEventListener("input", () => {
     optionsDiv.innerHTML = '<h1 class="btn"  id="header1-btn">Heading 1</h1>';
   } else if (inputValue.startsWith("/1 ")) {
     optionsDiv.innerHTML =
-      '<h1 class="btn" id="header1-btn">Heading 1</h1><span class="btn"  id="plain-text-btn">Normaltext</span>';
-  } else if (inputValue === "") {
+      '<h1 class="btn" id="header1-btn">Heading 1</h1>';
+  } else if (inputValue === " ") {
     optionsDiv.innerHTML =
       '<span class="btn" id="plain-text-btn">Normal  Text</span>';
   }
@@ -40,22 +40,33 @@ inputField.addEventListener("keydown", (event) => {
   if (event.key === "Enter") {
     event.preventDefault();
     const inputValue = inputField.value.trim();
-
+		
+   
     // Convert text to header 1 if option is selected
     let formattedText = inputValue;
     if (currentOption === "header1") {
       if (inputValue === "/1") {
-        formattedText = '<h1 contenteditable="true" class="editable-header1">Header 1</h1>';
+        formattedText = '<h1 contenteditable="true">Header 1</h1>';
       } else {
         formattedText = `<h1 contenteditable="true">${inputValue.replace("/1 ", "")}</h1>`;
       }
-    } else if (currentOption === "plain-text") {
+    }
+		 else if(inputValue === "/1") {
+			formattedText = '<h1 contenteditable="true" >Header 1</h1>';
+
+		} else if(inputValue.startsWith("/1")) {
+			formattedText = `<h1 contenteditable="true"  >${inputValue.replace("/1", "")}</h1>`;
+
+		} 
+		else if  (currentOption === "plain-text") {
       formattedText = inputValue;
     }
 
+	 
+
     // Add text to output and clear input field
-    outputDiv.innerHTML += `<div class=" text" contenteditable="true">${formattedText}</div>`;
+    outputDiv.innerHTML += `<div class="${currentOption} text" contenteditable="true">${formattedText}</div>`;
     inputField.value = "";
-		currentOption = "plain-text"
+		// currentOption = ""
   }
 });
