@@ -11,13 +11,13 @@ inputField.addEventListener("input", () => {
   // Display options based on current input
 
   if (inputValue === "/1") {
-    optionsDiv.innerHTML = '<h1 class="btn"  id="header1-btn">Heading 1</h1>';
+    optionsDiv.innerHTML = '<div class="wrapper"><h1 class="icon">T</h1><h1 class="btn"  id="header1-btn">Heading 1</h1></div>';
   } else if (inputValue.startsWith("/1 ")) {
     optionsDiv.innerHTML =
-      '<h1 class="btn" id="header1-btn">Heading 1</h1>';
+      '<div class="wrapper"><h1 class="icon">T</h1><h1 class="btn"  id="header1-btn">Heading 1</h1></div>';
   } else if (inputValue === " ") {
     optionsDiv.innerHTML =
-      '<span class="btn" id="plain-text-btn">Normal  Text</span>';
+      '<p class="btn plain" id="plain-text-btn">Normal  Text</p>';
   }
 
   // Add event listeners to options
@@ -46,13 +46,13 @@ inputField.addEventListener("keydown", (event) => {
     let formattedText = inputValue;
     if (currentOption === "header1") {
       if (inputValue === "/1") {
-        formattedText = '<h1 contenteditable="true">Header 1</h1>';
+        formattedText = '<h1 class="test" contenteditable="true">Header 1</h1>';
       } else {
         formattedText = `<h1 contenteditable="true">${inputValue.replace("/1 ", "")}</h1>`;
       }
     }
 		 else if(inputValue === "/1") {
-			formattedText = '<h1 contenteditable="true" >Header 1</h1>';
+			formattedText = '<h1 class="test" contenteditable="true" >Header 1</h1>';
 
 		} else if(inputValue.startsWith("/1")) {
 			formattedText = `<h1 contenteditable="true"  >${inputValue.replace("/1", "")}</h1>`;
