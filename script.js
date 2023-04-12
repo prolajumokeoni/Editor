@@ -48,7 +48,7 @@ inputField.addEventListener("keydown", (event) => {
       if (inputValue === "/1") {
         formattedText = '<h1 class="test" contenteditable="true">Header 1</h1>';
       } else {
-        formattedText = `<h1 contenteditable="true">${inputValue.replace("/1 ", "")}</h1>`;
+        formattedText = `<h1 contenteditable="true">${inputValue.slice(2)}</h1>`;
       }
     }
 		 else if(inputValue === "/1") {

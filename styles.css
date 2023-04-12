@@ -1,7 +1,66 @@
-.container {
-  padding-top: 50px;
+.top-bar {
+  border: 1px solid  #e5e7eb;
+  width: 98%;
+  height: 50px;
   margin: 0 auto;
+  border-radius: 7px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #9da2ad;
+  padding: 5px 14px;
+  margin-top: 40px;
+}
+img {
+  width: 40px;
+  height: 40px;
+  padding: 0 5px;
+
+}
+.end,
+.clock,
+.arrow,
+.flex-bar {
+ display: flex;
+ align-items: center;
+}
+
+.arrow-border {
+  border-left: 2px solid #e5e7eb;
+  line-height: 1px;
+}
+
+.border {
+  border-left: 2px solid #e5e7eb;
+  border-right: 2px solid #e5e7eb;
+  line-height: 1px;
+  padding: 0 3px;
+  margin: 0 5px;
+}
+
+.padding {
+  padding: 0 4px;
+}
+
+.logo {
+  padding: 5px 8px ;
+  width: 10px;
+  color: green;
+  font-weight: bolder;
+  background-color: #d7f7e4;
+  border-radius: 3px;
+}
+
+.container {
+  margin: 10px auto;
   text-align: center;
+  width: 100%;
+}
+
+.main {
+ text-align: center;
+ width: 100%;
+ margin: 0 auto;
 }
 
 .heading {

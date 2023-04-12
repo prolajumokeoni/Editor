@@ -4,21 +4,48 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Editor</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-zrnmn8R8KkWl12rAZFt4yKjxplaDaT7/EUkKm7AovijfrQItFWR7O/JJn4DAa/gx" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
     <div class="container">
-      <h2 class="heading">Frontend Developer test Project</h2>
-      <div id="output"></div>
-      <input
+      <div class="top-bar">
+        <div class="flex-bar">
+
+          <p class="logo">P</p>
+          <div class="clock border">
+            <i class="fal fa-clock padding"></i>
+            <p class="padding">0 min</p>
+          </div>
+          <img src="./images/profile.png" alt="img" /></img>
+
+          <div class="arrow arrow-border">
+            
+            <i class="fal fa-arrow-up fa-rotate-270 padding"></i>
+            <p class="padding">0</p>
+          </div>
+        </div>
+        <div class="end">
+          <i class="far fa-check-circle padding"></i>
+          <i class="far fa-cloud padding"></i>
+          <i class="far fa-ellipsis-v padding"></i>
+        </div>
+        </div>
+      </div>
+      <div class="main">
+
+        <h2 class="heading">Frontend Developer test Project</h2>
+        <div id="output"></div>
+        <input
         id="input-field"
         type="search"
         placeholder="Type /1 for header text"
-      />
-      <div class="optionswrappper" id="optionswrappper">
-        <h2>Add blocks</h2>
-        <span>keep typing to filter or backspace to clear input</span>
-        <div id="options"></div>
+        />
+        <div class="optionswrappper" id="optionswrappper">
+          <h2>Add blocks</h2>
+          <span>keep typing to filter or backspace to clear input</span>
+          <div id="options"></div>
+        </div>
       </div>
     </div>
     <script src="./script.js"></script>
